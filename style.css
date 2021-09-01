@@ -1,0 +1,23 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    height: 500px !important;
+}
+#load{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999999999;
+}
+button{
+    border: none;
+    background-color: rgb(142, 199, 96);
+    color: white;
+}
+h5{
+    color:rgb(142, 199, 96);;
+}
