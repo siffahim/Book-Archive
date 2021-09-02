@@ -4,6 +4,8 @@ loader.style.display = 'none';
 let warning = document.querySelector('#warning');
 warning.style.display = 'none';
 
+let container = document.querySelector('#container');
+
 const searchBook = async () => {
     const searchField = document.querySelector('#input-Field');
     const searchText = searchField.value;
@@ -12,6 +14,7 @@ const searchBook = async () => {
     if (searchText === '') {
         warning.style.display = 'block';
         loader.style.display = 'none'
+        container.textContent = '';
     }
     else {
 
@@ -28,7 +31,7 @@ const searchBook = async () => {
 
 const displayBook = (books) => {
     
-    const container = document.querySelector('#container');
+ 
     container.textContent = '';
 
     const book = books.docs
@@ -51,13 +54,13 @@ const displayBook = (books) => {
                     <div class="card h-100 text-center">
                         <div class="card-body">
                             <img src=' https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg' height='160px'/>
-                            <h6 class='mt-3'>Book Name</h6>
+                            <h5 class='mt-3'>Book Name</h5>
                             <p class="text-muted">${book.title.substr(0,40)}</p>
-                            <h6>Book Author</h6>
+                            <h5>Book Author</h5>
                             <p class="text-muted">${book.author_name[0]}</p>
-                            <h6>Book Publisher</h6>
+                            <h5>Book Publisher</h5>
                             <p class="text-muted">${book.publisher[0]}</p>
-                            <h6>First Publisher Date</h6>
+                            <h5>First Publisher Date</h5>
                             <p class="text-muted">${book.first_publish_year}</p>
                         </div>
                     </div>
