@@ -50,13 +50,13 @@ const displayBook = (books) => {
                     <div class="card h-100 text-center">
                         <div class="card-body">
                             <img src=' https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg' height='160px'/>
-                            <h5 class='mt-3'>Book Name</h5>
+                            <h6 class='mt-3'>Book Name</h6>
                             <p class="text-muted">${book.title.substr(0,40)}</p>
-                            <h5>Book Author</h5>
+                            <h6>Book Author</h6>
                             <p class="text-muted">${book.author_name[0]}</p>
-                            <h5>Book Publisher</h5>
+                            <h6>Book Publisher</h6>
                             <p class="text-muted">${book.publisher[0]}</p>
-                            <h5>First Publisher Date</h5>
+                            <h6>First Publisher Date</h6>
                             <p class="text-muted">${book.first_publish_year}</p>
                         </div>
                     </div>
