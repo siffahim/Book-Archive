@@ -6,6 +6,9 @@ warning.style.display = 'none';
 
 let container = document.querySelector('#container');
 
+//total search
+let totalSeach = document.querySelector('#totalSearch');
+
 const searchBook = async () => {
     const searchField = document.querySelector('#input-Field');
     const searchText = searchField.value;
@@ -15,6 +18,7 @@ const searchBook = async () => {
         warning.style.display = 'block';
         loader.style.display = 'none'
         container.textContent = '';
+        totalSeach.innerText = `${0} of ${0}`
     }
     else {
 
@@ -35,14 +39,14 @@ const displayBook = (books) => {
    
     const book = books.docs
     const searchResult = book.length
-    //total search
-    const totalSeach = document.querySelector('#totalSearch');
+ 
     totalSeach.innerText = `${searchResult} of ${books.numFound}`
 
     
     if (book.length === 0) {
 
         warning.style.display = 'block';
+        totalSeach.innerText = `${0} of ${0}`
     }
     else {
         book.forEach(book => {
