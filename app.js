@@ -31,12 +31,13 @@ const displayBook = (books) => {
     const container = document.querySelector('#container');
     container.textContent = '';
 
+    const book = books.docs
+    const searchResult = book.length
     //total search
     const totalSeach = document.querySelector('#totalSearch');
-    totalSeach.innerText = `${books.numFound}`
+    totalSeach.innerText = `${searchResult} of ${books.numFound}`
 
     
-    const book = books.docs
     if (book.length === 0) {
 
         warning.style.display = 'block';
