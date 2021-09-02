@@ -15,7 +15,7 @@ const searchBook = async () => {
     }
     else {
 
-        const url = `http://openlibrary.org/search.json?q=${searchText}`
+        const url = `https://openlibrary.org/search.json?q=${searchText}`
 
         const respons = await fetch(url);
         const data = await respons.json();

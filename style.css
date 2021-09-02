@@ -5,6 +5,8 @@ body {
 
 .card {
     height: 500px !important;
+    box-shadow: 0 0 5px rgb(0,0,0,0.4);
+    border-radius: 10px;
 }
 #load{
     position: absolute;
