@@ -4,9 +4,13 @@ body {
 }
 
 .card {
-    height: 500px !important;
+   /*  height: 550px !important; */
     box-shadow: 0 0 5px rgb(0,0,0,0.4);
     border-radius: 10px;
+}
+.card-body{
+   background-color:#222f3e;
+   border-radius:0 0 10px 10px;
 }
 #load{
     position: absolute;
@@ -22,8 +26,24 @@ body {
     transform: translate(-50%,-50%);
     z-index: 999999999;
 }
+img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+}
 button{
     border: none;
     background-color: rgb(142, 199, 96);
     color: white;
+}
+p,h5{
+    color:rgb(228, 220, 220);
+}
+h5{
+    font-family: 'Roboto', sans-serif;
+}
+.info{
+    margin-top:10px;
+    line-height: 5px;
+    font-size: 14px;
 }

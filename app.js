@@ -32,8 +32,7 @@ const searchBook = async () => {
 const displayBook = (books) => {
     
  
-    container.textContent = '';
-
+    container
     const book = books.docs
     const searchResult = book.length
     //total search
@@ -50,18 +49,17 @@ const displayBook = (books) => {
             const div = document.createElement('div');
             div.className = 'col';
             div.innerHTML = `
-                <div class="col">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <img src=' https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg' height='160px'/>
-                            <h5 class='mt-3'>Book Name</h5>
-                            <p class="text-muted">${book.title.substr(0,40)}</p>
-                            <h5>Book Author</h5>
-                            <p class="text-muted">${book.author_name[0]}</p>
-                            <h5>Book Publisher</h5>
-                            <p class="text-muted">${book.publisher[0]}</p>
-                            <h5>First Publisher Date</h5>
-                            <p class="text-muted">${book.first_publish_year}</p>
+                <div class="card h-100 text-center">
+                    <img src=' https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg'/>
+                    <div class="card-body">
+                        <h5>${book.title.substr(0,40)}</h5>
+                        <div class='info'>
+                            <h6 class='text-muted'>Book Author</h6>
+                            <p>${book.author_name[0]}</p>
+                            <h6 class='text-muted'>Book Publisher</h6>
+                            <p>${book.publisher[0]}</p>
+                            <h6 class='text-muted'>First Publisher Date</h6>
+                            <p>${book.first_publish_year}</p>
                         </div>
                     </div>
                 </div>
