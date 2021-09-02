@@ -39,7 +39,7 @@ const displayBook = (books) => {
    
     const book = books.docs
     const searchResult = book.length
- 
+    console.log(book)
     totalSeach.innerText = `${searchResult} of ${books.numFound}`
 
     
@@ -50,6 +50,9 @@ const displayBook = (books) => {
     }
     else {
         book.forEach(book => {
+            if (book.cover_i === undefined) {
+                book.cover_i = 10909258;
+            }
             const div = document.createElement('div');
             div.className = 'col';
             div.innerHTML = `
