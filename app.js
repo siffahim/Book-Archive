@@ -31,8 +31,8 @@ const searchBook = async () => {
 
 const displayBook = (books) => {
     
- 
-    container
+    container.textContent = '';
+   
     const book = books.docs
     const searchResult = book.length
     //total search
